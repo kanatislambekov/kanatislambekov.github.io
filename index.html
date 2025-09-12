@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanat Islambekov</title>
@@ -342,7 +343,32 @@
                 display: none;
             }
         }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #2c3e50;
+        }
+
+        .social-link i {
+            font-size: 1.5rem;
+        }
     </style>
+    
 </head>
 <body>
     <header>
@@ -366,6 +392,17 @@
             <p class="bio">
                 I am Islambekov Kanat, Master's student at the Nazarbayev Univeristy and  a researcher with interests in digital and computational demography, population and development, and public policy. My academic background combines social sciences and quantitative methods, which has shaped my approach to studying demographic change through computational and data-driven perspectives. I am currently co-authoring a paper on The role of religiosity and family ties in the Second Demographic Transition in Kazakhstan, where we explore how cultural and social norms influence demographic transitions.
             </p>
+            <div class="social-icons">
+                <a href="mailto:kanat.islambekov@nu.edu.kz" target="_blank" class="social-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://linkedin.com/in/kanat-islambekov-257867216/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/kanatislambekov" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
             <style>
               .bio {
                 text-align: justify;   /* makes both left and right edges straight */
@@ -501,7 +538,7 @@
                 
                 <div class="contact-item">
                     <strong>Github</strong>
-                    <a href="https://linkedin.com/in/yourname" target="_blank">github.com/kanatislambekov</a>
+                    <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/kanat-islambekov-257867216/</a>
                 </div>
             </div>
         </section>
