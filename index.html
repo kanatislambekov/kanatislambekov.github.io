@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Academic Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .bio {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .cv-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cv-button:hover {
+            background: #c0392b;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 2rem;
+            border-left: 4px solid #3498db;
+            padding-left: 2rem;
+        }
+
+        .degree {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .institution {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+
+        .date {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        .details {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+
+        /* Publications */
+        .publication {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #e67e22;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-venue {
+            color: #34495e;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-date {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border: 1px solid #ecf0f1;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+
+        .project:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-role {
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+
+        .skill-list li:before {
+            content: "•";
+            color: #3498db;
+            margin-right: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .hero {
+                padding: 3rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Print styles */
+        @media print {
+            header {
+                position: static;
+            }
+            
+            main {
+                margin-top: 0;
+            }
+            
+            .cv-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Kanat Islambekov</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="about" class="hero">
+            <h1>Kanat Islambekov</h1>
+            <p class="subtitle">Research Scientist</p>
+            <p class="bio">
+                I am Islambekov Kanat, Master's student at the Nazarbayev Univeristy and  a researcher with interests in digital and computational demography, population and development, and public policy. My academic background combines social sciences and quantitative methods, which has shaped my approach to studying demographic change through computational and data-driven perspectives. I am currently co-authoring on The role of religiosity and family ties in the Second Demographic Transition in Kazakhstan, where we explore how cultural and social norms influence demographic transitions.
+            </p>
+            <a href="/Users/kiramaya/Downloads/CV_ENG.pdf" class="cv-button" target="_blank">Download CV</a>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree">Master's Degree in Public Policy</div>
+                <div class="institution">Nazarbayev University</div>
+                <div class="date">2024 - 2026</div>
+                <div class="details">
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Exchange program</div>
+                <div class="institution">Korean Development Institute</div>
+                <div class="date">September 2025 - December 2025</div>
+                <div class="details">
+                </div>
+            </div> 
+            
+            <div class="education-item">
+                <div class="degree">B.S. in Political Science</div>
+                <div class="institution">Higher School of Economics</div>
+                <div class="date">2020 - 2024</div>
+                <strong>GPA:</strong> 8.83/10.0<br>
+                <div class="details">
+                </div>
+            </div>
+            <div class="skill-category">
+                    <h4>Academic Interests</h4>
+                    <ul class="skill-list">
+                        <li>Digital and Computational Demography</li>
+                        <li>Population and Development</li>
+                        <li>Public Policy</li>
+                    </ul>
+                </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication">
+                <div class="pub-title">The role of religiosity and family ties in Second Demographic Transition in Kazakhstan</div>
+                <div class="pub-authors">Islambekov Kanat & Kozlov Vladimir </div>
+                <div class="pub-venue">Journal Name, Volume(Issue), pages-pages</div>
+                <div class="pub-date">2025</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Research Projects</h2>
+            </div>
+                           
+                <div class="project">
+                <div class="project-title">Populism in Netherlands</div>
+                <div class="project-role">Responsible for Regressions and Data Vizualization</div>
+                <div class="project-description">
+                     
+                </div>
+                <div class="project-tech"><strong>Methods & Tools:</strong> Python, OLS Regressions, Data Analysis(pandas), Data Vizualization(matplotlib & seaborn)</div>
+                <a href="/Users/kiramaya/Downloads/Populism_Netherlands.pdf" target="_blank">Full Report (PDF)</a>
+                <a href="https://github.com/kanatislambekov/Research/blob/main/Populism%20in%20Netherlands/Populism_Netherlands.ipynb" target="_blank">Code</a>
+            </div>
+        
+            <div class="project">
+                <div class="project-title">Analyzing Government Response: the Case of Kazakhstan after the January Protests in 2022</div>
+                <div class="project-role">Independent Researcher</div>
+                <div class="project-description">
+                    Conducted an in-depth study on government narratives during the January 2022 protests in Kazakhstan, applying Latent Dirichlet Allocation (LDA) and network analysis to official speeches and media. Managed independent data collection through web scraping and text preprocessing, and developed a case study in authoritarian framing in Kazakhstan's context. 
+                </div>
+                <div class="project-tech"><strong>Methods & Tools:</strong> Python, Natural Language Processing(NLTK), LDA, Data Vizualization(matplotlib)</div>
+                <a href="/Users/kiramaya/Downloads/Diploma.pdf" target="_blank">Full Report (PDF)</a>
+                <a href="https://github.com/kanatislambekov/Research/tree/main/BA%20Thesis" target="_blank">Code</a>
+            </div>
+                
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="education-item">
+                <div class="degree">Intern</div>
+                <div class="institution">Bureau of National Statistics, Department of Demographics</div>
+                <div class="date">May 2025 - June 2025</div>
+                <div class="details">
+                    
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Data Collector & Data Analyst</div>
+                <div class="institution">IMG Arena</div>
+                <div class="date">November 2022 – June 2025</div>
+                <div class="details">
+                    Collected and analyzed data of 50+ sporting events. 
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Data Collector & Data Analyst</div>
+                <div class="institution">Resource Center for Field Research and Survey Technologies</div>
+                <div class="date">January 2022 – May 2022</div>
+                <div class="details">
+                    Conducted 200+ qualitative interviews for the national survey. Analyzed 500+ interviews using Python and R.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Research Assistant</div>
+                <div class="institution">CoronaNet Research Project</div>
+                <div class="date">August 2021 – January 2022</div>
+                <div class="details">
+                     Identified and filtered 1000+ state decrees designated to combat COVID-19 in Kazakhstan. Coded 400+ state decrees designated to combat COVID-19 in Kazakhstan. Conductex an analysis and summary of those 400+ state decrees designated to combat COVID-19 in Kazakhstan.
+                </div>
+            </div>
+            
+        </section>
+        <section id="contact">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:your.email@university.edu">kanat.islambekov@nu.edu.kz</a>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Github</strong>
+                    <a href="https://linkedin.com/in/yourname" target="_blank">github.com/kanatislambekov</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation links based on scroll position
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
