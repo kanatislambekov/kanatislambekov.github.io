@@ -343,6 +343,7 @@
                 display: none;
             }
         }
+
         .social-icons {
             display: flex;
             justify-content: center;
@@ -368,6 +369,32 @@
         .social-link i {
             font-size: 1.5rem;
         }
+
+        /* Research Notes */
+        .notes-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .note-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .note-item a:hover {
+            text-decoration: underline;
+        }
+
+        .note-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
     </style>
     
 </head>
@@ -380,6 +407,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#notes">Research Notes</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -473,6 +501,18 @@
                 <div class="project-tech"><strong>Methods & Tools:</strong> Python, Data Analysis(pandas), Data Vizualization, HTML</div>
                 <a href="https://github.com/kanatislambekov/internal-migration-flow-kz" target="_blank">Code</a>
             </div>
+        </section>
+
+        <!-- Research Notes section -->
+        <section id="notes">
+            <h2>Research Notes</h2>
+            <p>Small Jupyter notebooks and short research notes.</p>
+            <ul class="notes-list">
+                <li class="note-item">
+                    <a href="https://github.com/kanatislambekov/fertility-prediction/blob/main/Fertility%20Prediction.ipynb" target="_blank">Total Fertility Rate (TFR) prediction via development indicators using Random Forest</a>
+                    <div class="note-meta">Machine Learning</div>
+                </li>
+            </ul>
         </section>
 
         <section id="experience">
