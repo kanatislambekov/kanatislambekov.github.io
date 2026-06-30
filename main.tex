@@ -1,0 +1,261 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{\small #4} \\
+
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+% \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+% \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Kanat Islambekov} \\ \vspace{1pt}
+    \href{mailto:x@x.com}{\underline{kanat.islambekov@nu.edu.kz}} 
+    % \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    \href{https://kanatislambekov.github.io}
+    {\underline{kanatislambekov.github.io}}
+    \href{https://github.com/kanatislambekov}{\underline{github.com/kanatislambekov}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Master's degree in Public Policy}{}
+      {Nazarbayev University}{Aug. 2024 -- June 2026}
+    \resumeSubheading
+      {Exchange Program}{}
+      {Korean Development Institute}{Sep. 2025 -- Dec 2025}
+    \resumeSubheading
+      {Bachelor of Political Science and World politics}{}
+      {Higher School of Economics}{Sep. 2020 -- June 2024}
+  \resumeSubHeadingListEnd
+
+\section{Publications}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\begin{minipage}[t]{0.75\linewidth} % adjust width
+       Working Paper - The role of religiosity and family ties in the context of 
+       Second Demographic Transition in Kazakhstan
+     \end{minipage}}
+    {} % empty second argument
+    {Islambekov Kanat, Kozlov Vladimir, Kazenin Konstantin}
+    {\hfill Expected in 2026} % pushes the year to the right
+\resumeSubHeadingListEnd
+
+
+% %-----------PROJECTS-----------
+% \section{Projects}
+% \resumeSubHeadingListStart
+% \resumeProjectHeading
+% {\textbf{Research Assistant Populism in Russia} $|$ \emph{Qualitative Research paper}}{September 2020 -- present}
+%           \resumeItemListStart
+%             \resumeItem{Comparative analysis on the current situation in Russian political discussions }
+%             \resumeItem{Overview of main thesis-es of major political populists }
+%           \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+    
+    %-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Researcher}{May 2026 -- Present}
+      {Economics Research Institute, Centre of Macroeconomic Research and Projections}{}
+      \resumeItemListStart
+        \resumeItem{Contribute to macroeconomic research and projection work for Kazakhstan, connecting demographic, development, and national-statistics indicators to policy-relevant forecasting narratives}
+        \resumeItem{Work with the institute's model ecosystem, including input-output balance (IOB), computable general equilibrium (CGE), Kazakhstan regional, long-term macroeconomic forecasting, long-term demographic, medium-term quarterly macroeconomic, and composite leading indicator models}
+        \resumeItem{Developed applied demographic modelling projects, including an agent-based fertility simulation for Kazakhstan using MICS 2015 assumptions and a Random Forest model predicting Total Fertility Rate from development indicators}
+        \resumeItem{Built reproducible Python and dashboard workflows for internal migration flows, age-sex pyramids, population indicators, and visual summaries for research and policy communication}
+     \resumeItemListEnd
+    \resumeSubheading
+      {Research Assistant}{March 2026 -- Present}
+      {Seoul National University / Nazarbayev University}{}
+      \resumeItemListStart
+        \resumeItem{Analyze demographic health-related behavior, including smoking in Kazakhstan from 2020 to 2024, based on national survey data}
+        \resumeItem{Estimated binary-outcome models for smoking behavior, including logistic regression and linear probability specifications, with odds ratios, marginal effects, and predicted probabilities for interpretation}
+        \resumeItem{Built multivariate regression specifications with demographic and socio-economic controls, interaction terms, and subgroup comparisons by age, gender, region, education, and income-related indicators}
+        \resumeItem{Produced exploratory data analysis, survey-style crosstabs, trend visualizations, and robustness checks to compare health-behavior patterns across years and population groups}
+        \resumeItem{Prepared cleaned analytical datasets and publication-ready tables, figures, and interpretable outputs for collaborative research with Nazarbayev University and Seoul National University}
+     \resumeItemListEnd
+    \resumeSubheading
+      {Data Analyst Intern }{May 2025 -- June 2025}
+      {Bureau of National Statistics}{}
+      \resumeItemListStart
+        \resumeItem{Created different versions of dashboards in Tableau and Qlik Sense}
+        \resumeItem{Restructured 20 annual data tables for dashboards }
+     \resumeItemListEnd
+    \resumeSubheading
+      {Data Collector and Data Analyst }{November 2022 -- August 2024}
+      {IMG Arena}{}
+      \resumeItemListStart
+        \resumeItem{Collected and analyzed data of 50+ sporting events}
+        
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Data Collection and Data Analysis Intern}{January 2022 -- May 2022}
+      {Resource Center for Field Research and Survey Technologies}{}
+      \resumeItemListStart
+        \resumeItem{Conducted 200+ qualitative interviews for the national survey}
+        \resumeItem{Analyzed 500+ interviews using Stata and R }
+      \resumeItemListEnd
+      
+      \resumeSubheading
+      {Research Assistant}{August 2021 -- February 2022}
+      {CoronaNet Research Project}{}
+      \resumeItemListStart
+        \resumeItem{Identified and filtered 1000+ state decrees designated to combat Covid-19 in Kazakhstan}
+        \resumeItem{Coded 400+ state decrees designated to combat Covid-19 in Kazakhstan}
+        \resumeItem{Analysis and summary of 400+ state decrees designated to combat Covid-19 in Kazakhstan}
+        
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Research Assistant}{September 2020 -- June 2021}
+      {Higher School Of Economics}{}
+      \resumeItemListStart
+        \resumeItem{ Research paper on \textbf{Populism in Russia}}
+        \resumeItem{Overview of 20+ major political populists in Russia and Kazakhstan}
+        \resumeItem{Analysis of 50+ government reports and speeches }
+      \resumeItemListEnd
+ 
+      
+% -----------Multiple Positions Heading-----------
+    % \resumeSubSubheading
+    % {Software Engineer I}{Oct 2014 - Sep 2016}
+    % \resumeItemListStart
+    %     \resumeItem{Apache Beam}
+    %      {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+    % \resumeItemListEnd
+    % \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  
+
+  \resumeSubHeadingListEnd
+
+
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+
+\section{Certifications}
+\resumeSubHeadingListStart
+     \resumeItemListStart
+          \resumeItem{Associate Data Analyst in SQL - DataCamp}
+          \resumeItem{Data Analyst in Python - DataCamp}
+          \resumeItem{Equity Research - Freedom Broker}
+          \resumeItem{Research Training in Topics in Digital and Computational Demography - International Max Planck Research
+School for Population, Health and Data Science}
+     \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
